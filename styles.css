@@ -24,9 +24,10 @@ ul {
    Navbar
 =========================== */
 nav {
-  background: #fff;
+  background-color: white;
   color: #333;
-  padding: 15px 30px;
+  height: 70px;             /* Set consistent nav height */
+  padding: 0 30px;          /* Remove vertical padding */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,11 +37,10 @@ nav {
   width: 100%;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  height: 70px;
 }
 nav .logo img {
   height: 100%;
-  max-height: 60px;
+  max-height: 70px;
   width: auto;
   object-fit: contain;
 }
@@ -279,3 +279,4 @@ footer {
     font-size: 1rem;
   }
 }
+
