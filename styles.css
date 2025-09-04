@@ -1,6 +1,4 @@
-/* ===========================
-   Global Styles
-=========================== */
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -9,25 +7,13 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   line-height: 1.6;
-  color: #333;
-  background: #fff;
-}
-a {
-  text-decoration: none;
-  transition: 0.3s;
-}
-ul {
-  list-style: none;
 }
 
-/* ===========================
-   Navbar
-=========================== */
+/* Navbar */
 nav {
-  background-color: white;
+  background-color: #fff;
   color: #333;
-  height: 150px;             /* Set consistent nav height */
-  padding: 0 30px;          /* Remove vertical padding */
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,31 +22,35 @@ nav {
   left: 0;
   width: 100%;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 70px;
 }
+
 nav .logo img {
-  height: 100%;
-  max-height:100%;
+  height: auto;
+  max-height: 60px;
   width: auto;
   object-fit: contain;
 }
+
 nav ul {
+  list-style: none;
   display: flex;
   gap: 25px;
 }
 nav ul li a {
+  text-decoration: none;
   color: #333;
   font-weight: 600;
+  transition: color 0.3s;
 }
 nav ul li a:hover {
-  color: #00adb5;
+  color: #007bff;
 }
 
-/* ===========================
-   Hero Section
-=========================== */
+/* Hero */
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
               url('https://picsum.photos/1600/800') no-repeat center/cover;
   height: 100vh;
   display: flex;
@@ -71,35 +61,34 @@ nav ul li a:hover {
   padding: 20px;
 }
 .hero h1 {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   margin-bottom: 20px;
 }
 .hero p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
 }
 .btn {
   padding: 12px 24px;
   background: #00adb5;
   color: #fff;
-  border-radius: 6px;
-  font-weight: 500;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
 }
 .btn:hover {
   background: #007b80;
 }
 
-/* ===========================
-   Services
-=========================== */
+/* Services */
 .services {
   padding: 80px 20px;
   text-align: center;
   background: #fff;
 }
 .services h2 {
-  font-size: 2.2rem;
   margin-bottom: 20px;
+  font-size: 2.2rem;
   color: #111;
 }
 .services-intro {
@@ -114,57 +103,36 @@ nav ul li a:hover {
   gap: 25px;
 }
 .service-card {
+  background: linear-gradient(135deg, #00adb5, #007b80);
+  color: #fff;
   padding: 30px 20px;
   border-radius: 15px;
-  color: #fff;
-  text-align: center;
   box-shadow: 0 6px 15px rgba(0,0,0,0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
 }
+.service-card:nth-child(2n) { background: linear-gradient(135deg, #ff6b6b, #d93d3d); }
+.service-card:nth-child(3n) { background: linear-gradient(135deg, #6c5ce7, #4834d4); }
+.service-card:nth-child(4n) { background: linear-gradient(135deg, #f9a825, #f57f17); }
+.service-card:nth-child(5n) { background: linear-gradient(135deg, #00b894, #00897b); }
+.service-card:nth-child(6n) { background: linear-gradient(135deg, #e84393, #c2185b); }
+.service-card:nth-child(7n) { background: linear-gradient(135deg, #1e88e5, #0d47a1); }
+.service-card:nth-child(8n) { background: linear-gradient(135deg, #43a047, #2e7d32); }
+
 .service-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-}
-.service-card:nth-child(1) {
-  background: linear-gradient(135deg, #00adb5, #007b80);
-}
-.service-card:nth-child(2) {
-  background: linear-gradient(135deg, #ff6b6b, #d93d3d);
-}
-.service-card:nth-child(3) {
-  background: linear-gradient(135deg, #6c5ce7, #4834d4);
-}
-.service-card:nth-child(4) {
-  background: linear-gradient(135deg, #f9a825, #f57f17);
-}
-.service-card:nth-child(5) {
-  background: linear-gradient(135deg, #00b894, #00897b);
-}
-.service-card:nth-child(6) {
-  background: linear-gradient(135deg, #e84393, #c2185b);
-}
-.service-card:nth-child(7) {
-  background: linear-gradient(135deg, #1e88e5, #0d47a1);
-}
-.service-card:nth-child(8) {
-  background: linear-gradient(135deg, #43a047, #2e7d32);
-}
-.service-card .icon {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 .service-card h3 {
   margin-bottom: 10px;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 .service-card p {
   font-size: 0.95rem;
   line-height: 1.5;
 }
 
-/* ===========================
-   About
-=========================== */
+/* About */
 .about {
   padding: 80px 20px;
   background: #f8f9fa;
@@ -203,21 +171,26 @@ nav ul li a:hover {
   transform: translateY(-8px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
-.about-card .icon {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
 .about-footer {
   font-size: 1.2rem;
   margin-top: 40px;
   color: #222;
 }
 
-/* ===========================
-   Contact
-=========================== */
+/* Shared icon styles */
+.icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  display: block;
+}
+.service-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+/* Contact */
 .contact {
-  padding: 80px 20px;
+  padding: 60px 20px;
   text-align: center;
 }
 .contact form {
@@ -237,34 +210,28 @@ nav ul li a:hover {
 .contact button {
   border: none;
   cursor: pointer;
-  margin-top: 15px;
 }
 
-/* ===========================
-   Footer
-=========================== */
+/* Footer */
 footer {
   background: #111;
   color: #fff;
   text-align: center;
-  padding: 20px;
-  margin-top: 40px;
+  padding: 15px;
+  margin-top: 20px;
 }
 
-/* ===========================
-   Responsive
-=========================== */
+/* Responsive */
 @media (max-width: 768px) {
   nav ul {
-    display: none;
-    flex-direction: column;
-    background: #fff;
     position: absolute;
     top: 70px;
     right: 0;
+    background: #fff;
+    flex-direction: column;
     width: 200px;
+    display: none;
     padding: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
   nav ul.active {
     display: flex;
@@ -272,31 +239,15 @@ footer {
   nav ul li {
     margin: 15px 0;
   }
-  .hero h1 {
-    font-size: 2rem;
-  }
-  .hero p {
-    font-size: 1rem;
-  }
-}
-
-
-/* Responsive tweaks for smaller screens */
-@media (max-width: 768px) {
+  .hero h1 { font-size: 2rem; }
+  .hero p { font-size: 1rem; }
   nav .logo img {
-    max-height: 45px;   /* Shrink logo on tablets/mobiles */
+    max-height: 45px;
   }
 }
 
 @media (max-width: 480px) {
   nav .logo img {
-    max-height: 40px;   /* Even smaller for very small screens */
+    max-height: 40px;
   }
 }
-
-
-
-
-
-
-
