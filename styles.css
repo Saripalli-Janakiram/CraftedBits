@@ -186,3 +186,41 @@ footer { background: #111; color: #fff; text-align: center; padding: 15px; margi
   font-size: 0.95rem;
   line-height: 1.5;
 }
+nav {
+  background-color: white;   /* White background */
+  color: #333;               /* Dark text for contrast */
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* subtle shadow */
+}
+
+nav .logo img {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;             /* Dark links */
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #007bff;          /* Highlight color on hover */
+}
+
