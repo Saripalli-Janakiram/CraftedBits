@@ -40,7 +40,6 @@ nav {
 }
 nav .logo img {
   height: 100%;
-  max-height: 100px;
   width: auto;
   object-fit: contain;
 }
@@ -279,6 +278,7 @@ footer {
     font-size: 1rem;
   }
 }
+
 
 
 
