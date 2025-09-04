@@ -281,6 +281,20 @@ footer {
 }
 
 
+/* Responsive tweaks for smaller screens */
+@media (max-width: 768px) {
+  nav .logo img {
+    max-height: 45px;   /* Shrink logo on tablets/mobiles */
+  }
+}
+
+@media (max-width: 480px) {
+  nav .logo img {
+    max-height: 40px;   /* Even smaller for very small screens */
+  }
+}
+
+
 
 
 
