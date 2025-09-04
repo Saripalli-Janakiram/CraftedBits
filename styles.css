@@ -223,10 +223,26 @@ nav ul li a {
 nav ul li a:hover {
   color: #007bff;          /* Highlight color on hover */
 }
+nav {
+  background-color: white;
+  color: #333;
+  padding: 10px 30px;   /* controls navbar height */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  height: 70px;         /* set navbar height */
+}
+
 nav .logo img {
-  width: 1in;       /* fixed width */
-  height: auto;     /* keep aspect ratio */
-  max-height: 1in;  /* ensures it won’t exceed 1 inch height */
+  height: 100%;         /* fills navbar height */
+  width:400px;          /* keeps aspect ratio */
+  object-fit: contain;  /* no stretching */
 }
 
 
