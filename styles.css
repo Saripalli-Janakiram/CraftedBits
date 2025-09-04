@@ -223,27 +223,9 @@ nav ul li a {
 nav ul li a:hover {
   color: #007bff;          /* Highlight color on hover */
 }
-nav {
-  background-color: white;
-  color: #333;
-  padding: 10px 30px;   /* controls navbar height */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  height: 70px;         /* set navbar height */
+ct-fit: contain;  /* no stretching */
 }
 
-nav .logo img {
-  height: 100%;         /* fills navbar height */
-  width:400px;          /* keeps aspect ratio */
-  object-fit: contain;  /* no stretching */
-}
 
 
 
