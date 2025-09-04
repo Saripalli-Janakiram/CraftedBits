@@ -224,12 +224,10 @@ nav ul li a:hover {
   color: #007bff;          /* Highlight color on hover */
 }
 nav .logo img {
-  width: 250px;   /* adjust as per your logo design */
-  height: 500px;   /* keeps aspect ratio */
-  max-height: 60px;  /* prevents it from being too tall */
-  object-fit: contain;
+  width: 1in;       /* fixed width */
+  height: auto;     /* keep aspect ratio */
+  max-height: 1in;  /* ensures it won’t exceed 1 inch height */
 }
-
 
 
 
