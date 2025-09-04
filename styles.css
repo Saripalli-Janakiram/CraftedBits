@@ -225,10 +225,11 @@ nav ul li a:hover {
 }
 nav .logo img {
   width: 250px;   /* adjust as per your logo design */
-  height: 250px;   /* keeps aspect ratio */
+  height: 500px;   /* keeps aspect ratio */
   max-height: 60px;  /* prevents it from being too tall */
   object-fit: contain;
 }
+
 
 
 
