@@ -895,6 +895,7 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
       <div class="reveal-r">
         <div class="cform">
           <div class="frow">
+            <form action="https://formspree.io/f/mjkepgya" method="POST">
             <div class="fgroup"><label class="flabel">First Name</label><input class="finput" type="text" placeholder="Jane"></div>
             <div class="fgroup"><label class="flabel">Last Name</label><input class="finput" type="text" placeholder="Smith"></div>
           </div>
@@ -917,6 +918,7 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
           <div class="fgroup"><label class="flabel">Tell Us About Your Project</label><textarea class="ftextarea" placeholder="Describe your project, goals, timeline, and any relevant technical context..."></textarea></div>
           <button class="fsubmit" id="fsub" type="button" onclick="submitForm()">Send Message →</button>
           <div class="fsuccess" id="fsuc">✓ Message received! We'll be in touch within one business day.</div>
+        </form>
         </div>
       </div>
     </div>
@@ -1075,9 +1077,21 @@ document.querySelectorAll('.svc-card,.prod-card,.test-card').forEach(card=>{
 
 /* ── CONTACT FORM ── */
 function submitForm(){
-  const btn=document.getElementById('fsub'), suc=document.getElementById('fsuc');
-  btn.textContent='Sending...'; btn.classList.add('loading');
-  setTimeout(()=>{ btn.style.display='none'; suc.style.display='block'; },1300);
+    const form = document.querySelector("form");
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (response.ok) {
+      alert("Thank you! Your message has been sent.");
+      form.reset();
+    } else {
+      alert("Oops! Something went wrong.");
+    }
+  });
 }
 
 /* ── SMOOTH SCROLL ── */
@@ -1087,6 +1101,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
     if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); }
   });
 });
+ 
 </script>
 </body>
 </html>
