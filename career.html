@@ -148,25 +148,23 @@
     }
 
     form {
-      margin-top: 2rem;
       max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-      background: rgba(255,255,255,0.05);
-      padding: 2rem;
-      border-radius: 1rem;
-      border: 1px solid rgba(255,255,255,0.08);
-      backdrop-filter: blur(10px);
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255,255,255,0.05);
+    border-radius: 1rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
     }
 
     .form-row {
       margin-bottom: 1rem;
-      text-align: left;
     }
 
     label {
-      font-size: 0.9rem;
-      color: var(--gray);
+      display: block;
+    font-size: 0.9rem;
+    color: #9ca3af;
     }
 
     input, textarea {
@@ -277,34 +275,49 @@
   <section class="apply">
     <h2>Apply & Join Our Team</h2>
 
-    <form action="https://formspree.io/f/xeewwayg" method="POST" enctype="multipart/form-data">
-      <div class="form-row">
-        <label>Name</label>
-        <input type="text" name="name" required>
-      </div>
+    <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" id="applyForm">
 
-      <div class="form-row">
-        <label>Email</label>
-        <input type="email" name="email" required>
-      </div>
+  <!-- REQUIRED: Your Web3Forms Access Key -->
+  <input type="hidden" name="access_key" value="2d6073d6-ea1d-43d1-a3f4-c0edcab0820d">
 
-      <div class="form-row">
-        <label>Role You're Applying For</label>
-        <input type="text" name="role" required>
-      </div>
+  <!-- OPTIONAL: Redirect after success -->
+  <input type="hidden" name="redirect" value="https://yourwebsite.com/success.html">
 
-      <div class="form-row">
-        <label>Resume (PDF)</label>
-        <input type="file" name="resume" accept=".pdf" required>
-      </div>
+  <div class="form-row">
+    <label>Name</label>
+    <input type="text" name="name" required>
+  </div>
 
-      <div class="form-row">
-        <label>Message</label>
-        <textarea name="message" rows="4" required></textarea>
-      </div>
+  <div class="form-row">
+    <label>Email</label>
+    <input type="email" name="email" required>
+  </div>
 
-      <button type="submit">Submit Application</button>
-    </form>
+  <div class="form-row">
+    <label>Role Applying For</label>
+    <input type="text" name="role" required>
+  </div>
+
+  <div class="form-row">
+    <label>Resume (PDF)</label>
+    <input type="file" name="resume" accept=".pdf,.doc,.docx" required>
+  </div>
+
+  <div class="form-row">
+    <label>Message</label>
+    <textarea name="message" rows="4" required></textarea>
+  </div>
+
+  <button type="submit">Submit Application</button>
+
+</form>
+
+<!-- SUCCESS MESSAGE HANDLER -->
+<script>
+document.getElementById("applyForm").addEventListener("submit", function() {
+  alert("Submitting your application…");
+});
+</script>
   </section>
 
   <footer>
